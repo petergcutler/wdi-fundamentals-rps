@@ -19,11 +19,11 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-    return move || "getInput()".return;
+    return move || "getInput()";
 }
 
 function getComputerMove(move) {
-    return move || "randomPlay()".return;
+    return move || "randomPlay()";
 }
 
 function getWinner(playerMove,computerMove) {
@@ -69,10 +69,10 @@ function playTo(num) {
     } else if (result === "computer") {
         computerWins += 1;
     } else {
-        console.log("tie");
+        result = "... there is no winner, it's a tie!";
     }
 
-    console.log('Player chose ' + playerValue + ' while Computer chose ' + computerValue + " ... the winner is " + result);
+    console.log('Player chose ' + playerValue + ' and Computer chose ' + computerValue + " so the winner is " + result);
 
     console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
 
@@ -83,5 +83,3 @@ result = null;
 }
     return [playerWins, computerWins];
 }
-
-playTo(8);
